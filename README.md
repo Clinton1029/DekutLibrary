@@ -42,3 +42,16 @@ This system ensures structured, well-maintained, and easily accessible records f
 - **On Delete Cascade** removes dependent records automatically.
 
 ---
+## 🗂️ Database Schema
+
+### 📘 Books Table (`books`)
+
+| Column      | Type           | Description                    |
+|------------|--------------|--------------------------------|
+| book_id    | INT (PK)      | Unique book identifier        |
+| title      | VARCHAR(255)  | Book title                    |
+| author     | VARCHAR(255)  | Book author                   |
+| genre      | VARCHAR(100)  | Genre of the book             |
+| isbn       | VARCHAR(20) UNIQUE | Unique book ISBN code |
+| quantity   | INT DEFAULT 1 | Number of copies available    |
+| added_date | TIMESTAMP     | Date the book was added       |
