@@ -161,3 +161,30 @@ WHERE book_id NOT IN (SELECT book_id FROM borrowed_books);
 - Modify or add new queries based on your needs.
 
 ---
+
+## 🛠️ Setting Up GitHub Repository
+
+### 1️⃣ Initialize Git
+```bash
+git init
+```
+
+### 2️⃣ Add Remote Repository
+```bash
+git remote add origin https://github.com/your-username/DekutLibrarySystem.git
+```
+
+### 3️⃣ Create and Push README.md
+```bash
+echo "# Dekut Library Management System" > README.md
+git add README.md
+git commit -m "Added detailed README"
+git push origin main
+```
+
+### 4️⃣ Push Entire Project
+```bash
+git add .
+git commit -m "Initial project setup"
+git push origin main
+```
