@@ -142,3 +142,22 @@ WHERE book_id NOT IN (SELECT book_id FROM borrowed_books);
 ```
 
 ---
+
+## 🚀 How to Use the Database
+
+### 1️⃣ Setup MySQL Database
+1. Install **MySQL** on your system.
+2. Open MySQL and create a database:
+   ```sql
+   CREATE DATABASE DekutLibrarySystem;
+   USE DekutLibrarySystem;
+   ```
+
+### 2️⃣ Run the SQL File
+- Copy and execute the provided SQL script to create tables and insert sample data.
+
+### 3️⃣ Start Running Queries
+- Use the queries provided to fetch book, member, and borrowing records.
+- Modify or add new queries based on your needs.
+
+---
