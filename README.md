@@ -32,3 +32,13 @@ This system ensures structured, well-maintained, and easily accessible records f
 - Track **borrowed books** and their **due dates**.
 - Update book status when **returned**.
 - Automatically update availability when a book is borrowed.
+
+### 📌 Staff Management
+- Add and manage **librarians and admins**.
+- Securely store **hashed passwords**.
+
+### 📌 Data Integrity & Constraints
+- **Foreign key constraints** ensure valid borrow transactions.
+- **On Delete Cascade** removes dependent records automatically.
+
+---
