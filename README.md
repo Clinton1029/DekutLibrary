@@ -55,3 +55,38 @@ This system ensures structured, well-maintained, and easily accessible records f
 | isbn       | VARCHAR(20) UNIQUE | Unique book ISBN code |
 | quantity   | INT DEFAULT 1 | Number of copies available    |
 | added_date | TIMESTAMP     | Date the book was added       |
+
+
+### 👥 Members Table (`members`)
+
+| Column      | Type          | Description                  |
+|------------|--------------|------------------------------|
+| member_id  | INT (PK)     | Unique member identifier     |
+| name       | VARCHAR(255) | Member's full name          |
+| email      | VARCHAR(255) UNIQUE | Member's email  |
+| phone      | VARCHAR(15)  | Contact number              |
+| join_date  | DATE         | Date when the member joined |
+
+### 🔄 Borrowed Books Table (`borrowed_books`)
+
+| Column      | Type        | Description                              |
+|------------|------------|------------------------------------------|
+| borrow_id  | INT (PK)   | Unique borrow transaction ID             |
+| book_id    | INT (FK)   | ID of the borrowed book (from `books`)   |
+| member_id  | INT (FK)   | ID of the borrowing member (from `members`) |
+| borrow_date| DATE       | Date when the book was borrowed          |
+| return_date| DATE       | Expected return date                     |
+| status     | ENUM       | `borrowed` or `returned`                 |
+
+### 👨‍💼 Staff Table (`staff`)
+
+| Column    | Type          | Description                      |
+|----------|--------------|----------------------------------|
+| staff_id | INT (PK)     | Unique staff identifier         |
+| name     | VARCHAR(255) | Staff member’s name            |
+| email    | VARCHAR(255) UNIQUE | Email for login |
+| password | VARCHAR(255) | Hashed password for security   |
+| role     | ENUM        | `admin` or `librarian`          |
+
+---
+
