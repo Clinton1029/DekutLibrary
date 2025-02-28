@@ -16,3 +16,19 @@ The **Dekut Library Management System** is designed to efficiently handle the op
 This system ensures structured, well-maintained, and easily accessible records for a modern library.
 
 ---
+
+## 🛠️ Features
+
+### 📌 Book Management
+- Store book details such as **title, author, genre, ISBN, and quantity**.
+- Track book availability using the **quantity** column.
+- Automatically store **timestamps** when books are added.
+
+### 📌 Member Management
+- Add members with details such as **name, email, phone, and join date**.
+- Ensure data integrity with **unique email validation**.
+
+### 📌 Borrow & Return System
+- Track **borrowed books** and their **due dates**.
+- Update book status when **returned**.
+- Automatically update availability when a book is borrowed.
