@@ -188,3 +188,29 @@ git add .
 git commit -m "Initial project setup"
 git push origin main
 ```
+---
+
+## 🔗 Contributing
+
+Want to contribute? Follow these steps:
+
+1. **Fork** the repository.
+2. **Clone** your forked repo:
+   ```bash
+   git clone https://github.com/your-username/DekutLibrarySystem.git
+   ```
+3. **Create a new branch:**
+   ```bash
+   git checkout -b feature-branch
+   ```
+4. **Make changes and commit:**
+   ```bash
+   git add .
+   git commit -m "Added a new feature"
+   ```
+5. **Push changes and create a pull request:**
+   ```bash
+   git push origin feature-branch
+   ```
+
+---
