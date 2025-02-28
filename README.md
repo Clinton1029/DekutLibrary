@@ -90,3 +90,55 @@ This system ensures structured, well-maintained, and easily accessible records f
 
 ---
 
+## 📂 SQL Queries
+
+### 📌 Show All Tables
+```sql
+SHOW TABLES;
+```
+
+### 📌 Retrieve All Books
+```sql
+SELECT * FROM books;
+```
+
+### 📌 List Borrowed Books
+```sql
+SELECT b.title, m.name, bb.borrow_date, bb.return_date, bb.status
+FROM borrowed_books bb
+JOIN books b ON bb.book_id = b.book_id
+JOIN members m ON bb.member_id = m.member_id;
+```
+
+### 📌 Get All Staff Members
+```sql
+SELECT name, email, role FROM staff;
+```
+
+---
+
+## 📊 Exploratory Data Analysis (EDA)
+
+### Example Queries for EDA:
+
+📌 **Find the Most Borrowed Books:**
+```sql
+SELECT b.title, COUNT(bb.book_id) AS borrow_count
+FROM borrowed_books bb
+JOIN books b ON bb.book_id = b.book_id
+GROUP BY b.title
+ORDER BY borrow_count DESC;
+```
+
+📌 **Check Active Borrowed Books:**
+```sql
+SELECT * FROM borrowed_books WHERE status = 'borrowed';
+```
+
+📌 **Find Books that Were Never Borrowed:**
+```sql
+SELECT title FROM books
+WHERE book_id NOT IN (SELECT book_id FROM borrowed_books);
+```
+
+---
